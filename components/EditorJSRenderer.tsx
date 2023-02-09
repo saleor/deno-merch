@@ -1,7 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
-import { tw } from "../utils/twind.ts";
-
 interface ParagraphData {
   text: string;
 }
@@ -31,7 +27,7 @@ interface ejsData {
 export const renderParagraph = (data: ParagraphData) => {
   return (
     <p
-      class={tw`text-base text-gray-800`}
+      class="text-base text-gray-800"
       dangerouslySetInnerHTML={{
         __html: data.text,
       }}
@@ -44,7 +40,7 @@ export const renderHeader = (data: HeaderData) => {
     case 1:
       return (
         <h1
-          class={tw`text-5xl text-gray-800 my-2`}
+          class="text-5xl text-gray-800 my-2"
           dangerouslySetInnerHTML={{
             __html: data.text,
           }}
@@ -53,7 +49,7 @@ export const renderHeader = (data: HeaderData) => {
     case 2:
       return (
         <h2
-          class={tw`text-2xl text-gray-800 my-2`}
+          class="text-2xl text-gray-800 my-2"
           dangerouslySetInnerHTML={{
             __html: data.text,
           }}
@@ -62,7 +58,7 @@ export const renderHeader = (data: HeaderData) => {
     case 3:
       return (
         <h3
-          class={tw`text-xl text-gray-800 my-2`}
+          class="text-xl text-gray-800 my-2"
           dangerouslySetInnerHTML={{
             __html: data.text,
           }}
@@ -71,7 +67,7 @@ export const renderHeader = (data: HeaderData) => {
     default:
       return (
         <h4
-          class={tw`text-lg text-gray-800 my-2`}
+          class="text-lg text-gray-800 my-2"
           dangerouslySetInnerHTML={{
             __html: data.text,
           }}
@@ -83,7 +79,7 @@ export const renderHeader = (data: HeaderData) => {
 const renderList = (data: ListData) => {
   if (data.style === "ordered") {
     return (
-      <ol class={tw`list-decimal`}>
+      <ol class="list-decimal">
         {data.items.map((item) => (
           <li
             dangerouslySetInnerHTML={{
@@ -98,7 +94,7 @@ const renderList = (data: ListData) => {
     <ul>
       {data.items.map((item) => (
         <li
-          class={tw`list-disc ml-8`}
+          class="list-disc ml-8"
           dangerouslySetInnerHTML={{
             __html: item,
           }}
@@ -109,7 +105,7 @@ const renderList = (data: ListData) => {
 };
 
 const renderDelimiter = () => {
-  return <hr class={tw`my-2`} />;
+  return <hr class="my-2" />;
 };
 
 const renderBlock = (block: esjBlock) => {

@@ -1,7 +1,4 @@
-/** @jsx h */
-import { h } from "preact";
 import { useState } from "preact/hooks";
-import { tw } from "@twind";
 import { addToCart, useCart } from "@/utils/data.ts";
 
 interface AddToCartProps {

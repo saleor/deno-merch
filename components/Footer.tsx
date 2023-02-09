@@ -1,35 +1,30 @@
-/** @jsx h */
-import { h } from "preact";
-import { tw } from "@twind";
-
 export function Footer() {
   return (
     <footer
-      class={tw
-        `w-11/12 max-w-5xl mx-auto mt-24 sm:!mt-28 mb-8 flex items-center justify-between`}
+      class="w-11/12 max-w-5xl mx-auto mt-24 sm:!mt-28 mb-8 flex items-center justify-between"
     >
-      <span class={tw`flex items-center gap-4`}>
+      <span class="flex items-center gap-4">
         <a
-          class={tw`flex items-center gap-2 text-gray-700`}
+          class="flex items-center gap-2 text-gray-700"
           href="https://fresh.deno.dev"
         >
           <img
             src="/fresh_logo.svg"
             alt="Fresh Logo"
-            class={tw`h-7 w-7`}
+            class="h-7 w-7"
           />
           Built with <strong>Fresh</strong>
         </a>
-        <span class={tw`text-gray-300 text-sm`}>|</span>
+        <span class="text-gray-300 text-sm">|</span>
         <a
-          class={tw`hover:underline`}
+          class="hover:underline"
           href="https://github.com/saleor/deno-merch"
         >
           Source
         </a>
       </span>
       <a
-        class={tw`text-sm text-gray-400 hidden items-center gap-2 sm:!flex`}
+        class="text-sm text-gray-400 hidden items-center gap-2 sm:!flex"
         href="https://saleor.cloud/"
       >
         Powered by
@@ -87,7 +82,7 @@ export function Footer() {
           >
           </path>
         </svg>{" "}
-        <span class={tw`text-gray-600`}>
+        <span class="text-gray-600">
         </span>
       </a>
     </footer>
